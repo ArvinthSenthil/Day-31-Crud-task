@@ -16,7 +16,7 @@ export function Editcharacter (){
     fetch(`${API}/${id}`)
         .then((data) => data.json())
         .then((char) => setcharacters(char))
-}, []);
+}, [id]);
  
     
   
