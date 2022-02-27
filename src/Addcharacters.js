@@ -10,7 +10,7 @@ import * as yup from "yup";
 
 // Function to Addcharacters
 export function Addcharacter() {
-  const movieValidationSchema = yup.object({
+  const characterValidationSchema = yup.object({
     character_name : yup.string().required("Enter character_name"),
     poster: yup
       .string()
@@ -24,7 +24,7 @@ export function Addcharacter() {
   // To handle form validation
   const formik = useFormik({
     initialValues: { character_name: "", poster: "",description:"",Cast:"" },
-     validationSchema: movieValidationSchema,
+     validationSchema: characterValidationSchema,
     onSubmit: (newChar) => {
       addChar(newChar)
     },
